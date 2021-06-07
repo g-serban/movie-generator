@@ -1,0 +1,45 @@
+{% extends 'base.html' %}
+
+{% block body %}
+<div class="content">
+    <h1 style="text-align: center">Movie generator</h1>
+    {% if is_movie|length < 1 %}
+    <h4 style="text-align: left">Please select a genre</h4>
+
+    <form action="/" method="POST">
+        <label for="content">Choose a genre:</label>
+        <select name="content" id="content">
+          <option value="action">Action</option>
+          <option value="comedy">Comedy</option>
+          <option value="drama">Drama</option>
+          <option value="horror">Horror</option>
+        </select>
+            <input type="submit" value="Find movie">
+        </form>
+</div>
+
+<div class="year">
+    <h4 style="text-align: left">Or select by year</h4>
+
+    <form action="/" method="POST">
+        <label for="year">Choose a year:</label>
+        <select name="year" id="year">
+          <option value="2019">2019</option>
+          <option value="2018">2018</option>
+          <option value="2017">2017</option>
+          <option value="2016">2016</option>
+        </select>
+            <input type="submit" value="Find movie">
+        </form>
+</div>
+
+    {% else %}
+    <table>
+       <tr>
+            <th> {{ is_movie[0] }} </th>
+            <th> {{ is_movie[18] }} </th>
+       </tr>
+    </table>
+
+    {% endif %}
+{% endblock %}
