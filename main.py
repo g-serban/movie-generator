@@ -98,14 +98,4 @@ def recursion(year):
             break
 
 
-# TODO find out why recursion doesn't work on flask app but works on test2.py
-# TODO display dictionary values separately
-# TODO 3. add year option
-# TODO 4. send from frontend info to backend, backend sends info to frontend with selected specifications
-# TODO 5. display all information about the movie on frontend
-# TODO 6. add a 'show another movie' option
-# TODO 7. maybe add a search functionality
-# TODO 8. deploy on heroku or aws
-# TODO 9. add requirements.txt
-
 

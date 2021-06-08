@@ -2,42 +2,81 @@
 
 {% block body %}
 <div class="content">
-    <h1 style="text-align: center">Movie generator</h1>
+    <h3 class="w3-center">Movie generator</h3>
     {% if is_movie|length < 1 %}
-    <h4 style="text-align: left">Please select a genre</h4>
+    <p class="w3-wide"><i class="fa fa-laptop"></i>Please select a genre</p>
 
     <form action="/" method="POST">
-        <label for="content">Choose a genre:</label>
-        <select name="content" id="content">
+        <label for="content">Choose a genre:</label><br><br>
+        <select name="content" id="content" class="w3-container w3-padding-small w3-dark-grey left" style="width:7%">
           <option value="action">Action</option>
           <option value="comedy">Comedy</option>
           <option value="drama">Drama</option>
           <option value="horror">Horror</option>
+          <option value="sci-fi">Sci-Fi</option>
+          <option value="romance">Romance</option>
+          <option value="thriller">Thriller</option>
+          <option value="drama">Drama</option>
+          <option value="mystery">Mystery</option>
+          <option value="crime">Crime</option>
+          <option value="animation">Animation</option>
+          <option value="adeventure">Adventure</option>
+          <option value="fantasy">Fantasy</option>
+          <option value="comedy-romance">Comedy-Romance</option>
+          <option value="action-comedy">Action-Comedy</option>
+          <option value="superhero">Superhero</option>
         </select>
-            <input type="submit" value="Find movie">
+            <br><br><input class="w3-container w3-padding-small w3-dark-grey left" style="width:6%" type="submit" value="Find movie">
         </form>
-</div>
+</div><br>
 
-<div class="year">
-    <h4 style="text-align: left">Or select by year</h4>
-
+<br><div class="year">
+    <p class="w3-wide"><i class="fa fa-laptop"></i>Or select by year</p>
     <form action="/" method="POST">
-        <label for="year">Choose a year:</label>
-        <select name="year" id="year">
+        <label for="year">Choose a year:</label><br><br>
+        <select name="year" id="year" class="w3-container w3-padding-small w3-dark-grey left" style="width:7%">
+          <option value="2021">2021</option>
+          <option value="2020">2020</option>
           <option value="2019">2019</option>
           <option value="2018">2018</option>
           <option value="2017">2017</option>
           <option value="2016">2016</option>
+          <option value="2015">2015</option>
+          <option value="2014">2014</option>
+          <option value="2013">2013</option>
+          <option value="2012">2012</option>
+          <option value="2011">2011</option>
+          <option value="2010">2010</option>
+          <option value="2009">2009</option>
+          <option value="2008">2008</option>
+          <option value="2007">2007</option>
+          <option value="2006">2006</option>
+          <option value="2005">2005</option>
+          <option value="2004">2004</option>
+          <option value="2003">2003</option>
+          <option value="2002">2002</option>
+          <option value="2001">2001</option>
+          <option value="2000">2000</option>
+          <option value="1999">1999</option>
+          <option value="1998">1998</option>
+          <option value="1997">1997</option>
+          <option value="1996">1996</option>
+          <option value="1995">1995</option>
+          <option value="1994">1994</option>
+          <option value="1993">1993</option>
+          <option value="1992">1992</option>
+          <option value="1991">1991</option>
+          <option value="1990">1990</option>
         </select>
-            <input type="submit" value="Find movie">
+            <br><br><input class="w3-container w3-padding-small w3-dark-grey left" style="width:6%" type="submit" value="Find movie">
         </form>
 </div>
 
     {% else %}
     <table>
        <tr>
-            <th> {{ is_movie[0] }} </th>
-            <th> {{ is_movie[18] }} </th>
+            <th class="w3-center"> {{ is_movie[0] }} </th>
+             <th class="w3-center"> {{ is_movie }}</th>
        </tr>
     </table>
 
